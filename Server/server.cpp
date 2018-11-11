@@ -34,15 +34,16 @@ class File{
 
 vector<Client> clients;
 vector<File> files;
-void register_client(string ip, int port)
+void register_client(string ip, int port, int id)
 {
     Client new_client;
     new_client.ip = ip;
     new_client.port = port;
-    new_client.id = 0;
+    new_client.id = id;
     clients.push_back(new_client);
 
 }
+
 
 
 int main(int argc, char const* argv[])
@@ -57,6 +58,8 @@ int main(int argc, char const* argv[])
     bool is_conn = false;
     fd_set rfds, afds;
     int connfd;
+    int id = 0;
+    char* status = "1";
 
     // Creating socket file descriptor
     if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) == 0)
@@ -113,7 +116,9 @@ int main(int argc, char const* argv[])
             printf("\nclient port: %d\n", ntohs(sock_client->sin_port));
             fflush(stdout);
             FD_SET(new_socket, &afds);
-            register_client(str_cli_ip,ntohs(sock_client->sin_port));
+            register_client(str_cli_ip,ntohs(sock_client->sin_port), id);
+            id++;
+            send(new_socket, status, strlen(status), 0);
             cout << clients.size();
             fflush(stdout);
         }

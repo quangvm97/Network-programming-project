@@ -9,7 +9,7 @@ int main(int argc, char const *argv[])
     char a[] = "a";
     int sock = 0, valread;
     struct sockaddr_in address;
-    char *hello = "hello";
+    char *hello = "hello abc bca anbch";
     hello = (char *) malloc(200*sizeof(char));
     char buffer[1024] = {0};
 
