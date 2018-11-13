@@ -9,8 +9,8 @@ int main(int argc, char const *argv[])
     char a[] = "a";
     int sock = 0, valread;
     struct sockaddr_in address;
-    char *hello = "hello abc bca anbch";
-    hello = (char *) malloc(200*sizeof(char));
+    char *hello = "hello";
+    char *fileName = "abc cba aa anc nmc mnhnmnh";
     char buffer[1024] = {0};
 
     //Tao socket
@@ -36,9 +36,17 @@ int main(int argc, char const *argv[])
     //Vong lap, neu nhap vao ki tu khac khong phai ki tu dac biet thi gui no cho server
 
 
-    send(sock , hello , strlen(hello) , 0 );
+    // send(sock , hello , strlen(hello) , 0 );
 
     //Neu la ki tu dac biet thi dong ket noi
+    fflush(stdout);
+    // send(sock , fileName , strlen(fileName) , 0 );
+    valread = read( sock , buffer, 1024);
+    if(strcmp(buffer,"1") != 0){
+        send(sock , fileName , strlen(fileName) , 0 );
+    }
+    printf("%s", fileName);
+    printf("%s\n",buffer );
     close(sock);
     return 0;
 }

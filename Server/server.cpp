@@ -44,7 +44,23 @@ void register_client(string ip, int port, int id)
 
 }
 
-
+void convert(char*  buffer, int id){
+    char str[4000];
+    memset(&str,'\0',sizeof(str));
+    strcpy(str,buffer);
+    memset(&buffer,'\0',sizeof(buffer));
+    char *p = strtok(str, " ");
+    //get name file
+    while(p){
+        string tmp = p;
+        File new_file;
+        new_file.name = tmp;
+        new_file.client_id = id;
+        p = strtok(NULL, " ");
+        files.push_back(new_file);
+        // cout << files.size();
+    }
+}
 
 int main(int argc, char const* argv[])
 {
@@ -118,8 +134,24 @@ int main(int argc, char const* argv[])
             FD_SET(new_socket, &afds);
             register_client(str_cli_ip,ntohs(sock_client->sin_port), id);
             id++;
+            //Gui thong bao ok
             send(new_socket, status, strlen(status), 0);
-            cout << clients.size();
+            fflush(stdout);
+            //Nhan danh sach file tu client
+            memset(&buffer,'\0',sizeof(buffer));
+            valread = read( new_socket , buffer, 1024);
+            //Neu co tra ve danh sach file thi se luu vao
+            if(strcmp(buffer, "") != 0){
+                convert(buffer, id);
+            }
+
+            int count = files.size();
+            cout << "Tong so file: " << count;
+            cout << "Danh sach file la: ";
+            for(int i = 0; i < count; i++){
+                cout << (files.at(i).name) << " " ;
+            }
+            // cout << clients.size();
             fflush(stdout);
         }
 
