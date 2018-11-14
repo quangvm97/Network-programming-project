@@ -15,7 +15,7 @@
 #include <arpa/inet.h>
 
 //#define _BSD_SOURCE
-#define PORT 8080
+#define PORT 4000
 #define SIZE_BUFFER 1024
 
 using namespace std;
@@ -75,7 +75,8 @@ int main(int argc, char const* argv[])
     fd_set rfds, afds;
     int connfd;
     int id = 0;
-    char* status = "1";
+    char *status = "1"; 
+    char hello = '1';
 
     // Creating socket file descriptor
     if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) == 0)
@@ -134,94 +135,28 @@ int main(int argc, char const* argv[])
             FD_SET(new_socket, &afds);
             register_client(str_cli_ip,ntohs(sock_client->sin_port), id);
             id++;
+            send(new_socket , status , strlen(status) , 0 );
             //Gui thong bao ok
-            send(new_socket, status, strlen(status), 0);
-            fflush(stdout);
-            //Nhan danh sach file tu client
-            memset(&buffer,'\0',sizeof(buffer));
-            valread = read( new_socket , buffer, 1024);
-            //Neu co tra ve danh sach file thi se luu vao
-            if(strcmp(buffer, "") != 0){
-                convert(buffer, id);
-            }
+             fflush(stdout);
+                            //Nhan danh sach file tu client
+                            memset(&buffer,'\0',sizeof(buffer));
+                            valread = read( new_socket , buffer, 1024);
+                            //Neu co tra ve danh sach file thi se luu vao
+                            if(strcmp(buffer, "") != 0){
+                                convert(buffer, id);
+                            }
 
-            int count = files.size();
-            cout << "Tong so file: " << count;
-            cout << "Danh sach file la: ";
-            for(int i = 0; i < count; i++){
-                cout << (files.at(i).name) << " " ;
-            }
-            // cout << clients.size();
-            fflush(stdout);
+                            int count = files.size();
+                            cout << "Tong so file: " << count;
+                            cout << "Danh sach file la: ";
+                            for(int i = 0; i < count; i++){
+                                cout << (files.at(i).name) << " " ;
+                            }
+                            // cout << clients.size();
+                            fflush(stdout);
+            
         }
 
-//        for (connfd = 0; connfd < 15; ++connfd)
-//        {
-//            if (connfd != server_fd && FD_ISSET(connfd, &rfds))
-//            {
-//
-//                is_conn = true;
-//                while (is_conn)
-//                {
-//                    strcpy(buffer, "");
-//                    valread = read(connfd, buffer, 1024);
-//                    buffer[valread] = '\0';
-//
-//                    printf("file request from client: %s\n", buffer);
-//                    if (strcmp(buffer, "QUIT") == 0 || strcmp(buffer, "") == 0)
-//                    {
-//                        printf("Client closed connection !");
-//                        fflush(stdout);
-//                        close(connfd);
-//                        FD_CLR(connfd, &afds);
-//                        break;
-//                    }
-//                    size_file = -1;
-//                    FILE* fp;
-//                    fp = fopen(buffer, "rb");
-//                    if (fp == NULL)
-//                    {
-//                        write(connfd, &size_file, sizeof(int));
-//                        fprintf(stderr, "File not found!\n");
-//                        close(fp);
-//                        is_conn = false;
-//                        continue;
-//                    }
-//
-//
-//                    fseek(fp, 0L, SEEK_END);
-//                    size_file = ftell(fp);
-//                    fseek(fp, SEEK_SET, 0);
-//
-//                    write(connfd, &size_file, sizeof(int));
-//                    if (size_file == 0)
-//                    {
-//                        printf("File is \"%s\" empty!", buffer);
-//                        break;
-//                    }
-//
-//                    while (size_file > 0)
-//                    {
-//                        if (size_file >= SIZE_BUFFER)
-//                        {
-//                            fread(buffer, SIZE_BUFFER, 1, fp);
-//                            write(connfd, buffer, SIZE_BUFFER);
-//                        }
-//                        else
-//                        {
-//                            fread(buffer, size_file, 1, fp);
-//                            write(connfd, buffer, size_file);
-//                        }
-//                        size_file = size_file - SIZE_BUFFER;
-//                    }
-//                    printf("Send file to client succsess!\n");
-//                    printf("Total file downloaded: %d\n", ++num_file);
-//                    fflush(stdout);
-//                    close(fp);
-//                    is_conn = false;
-//                }
-//            }
-//        }
     }
     return 0;
 }
