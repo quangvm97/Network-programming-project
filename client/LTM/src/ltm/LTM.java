@@ -5,10 +5,12 @@
  */
 package ltm;
 
-import java.io.*;
-import java.net.InetAddress;
-import java.net.Socket;
-import java.util.Scanner;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -24,19 +26,35 @@ public class LTM {
      */
     public static void main(String[] args) throws Exception {
 
-        InetAddress serverAddr = InetAddress.getByName(SERVER_IP);
-        Socket socket = new Socket(serverAddr, SERVER_PORT);
-        new Client(socket);
-        InputStream inFromServer = socket.getInputStream();
-        DataInputStream in = new DataInputStream(inFromServer);
-        PrintStream printStream = new PrintStream(socket.getOutputStream());
-        printStream.println("Readme.odt");
-        socket.getOutputStream().flush();
-        Scanner scanner = new Scanner(socket.getInputStream());
-        System.out.println(scanner.next());
+//        InetAddress serverAddr = InetAddress.getByName(SERVER_IP);
+//        Socket socket = new Socket(serverAddr, SERVER_PORT);
+//        new Client(socket);
+//        InputStream inFromServer = socket.getInputStream();
+//        DataInputStream in = new DataInputStream(inFromServer);
+//        PrintStream printStream = new PrintStream(socket.getOutputStream());
+//        printStream.println("Readme.odt");
+//        socket.getOutputStream().flush();
+//        Scanner scanner = new Scanner(socket.getInputStream());
+//        System.out.println(scanner.next());
+        String json = "{\"client\":[{\"ip\":\"127.0.0.1\"}, {\"ip\":\"127.0.0.1\"}, {\"ip\":\"127.0.0.1\"}]}";
+        parseJson(json);
     }
 
     static class ThreadManager {
         static final ExecutorService t = Executors.newCachedThreadPool();
     }
+
+    public static List<ClientDetails> parseJson(String json) throws JSONException {
+        List<ClientDetails> clients = new ArrayList<>();
+        JSONObject jsonRoot = new JSONObject(json);
+        JSONArray jsonCollection = jsonRoot.getJSONArray("client");
+        for (int i = 0; i < jsonCollection.length(); i++) {
+            ClientDetails client =
+                    new ClientDetails(jsonCollection.getJSONObject(i).getString("ip"));
+            System.out.println(client.getIp());
+            clients.add(client);
+        }
+        return clients;
+    }
+
 }
