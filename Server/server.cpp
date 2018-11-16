@@ -108,16 +108,10 @@ int main(int argc, char const* argv[])
         exit(EXIT_FAILURE);
     }
     printf("\nlistening...\n");
-    FD_ZERO(&afds);
-    FD_SET(server_fd, &afds);
-    while (1)
-    {
-        memcpy(&rfds, &afds, sizeof(rfds));
-        if (select(15, &rfds, (fd_set*)0, (fd_set*)0, (struct timeval*)0) < 0)
-            perror("ERROR");
-        if (FD_ISSET(server_fd, &rfds))
-        {
-            int new_socket;
+    // FD_ZERO(&afds);
+    // FD_SET(server_fd, &afds);
+ 
+  
             if ((new_socket = accept(server_fd, (struct sockaddr*)&address, (socklen_t*)&addrlen))
                 < 0)
             {
@@ -132,7 +126,7 @@ int main(int argc, char const* argv[])
             printf("\nclient ip: %s", str_cli_ip);
             printf("\nclient port: %d\n", ntohs(sock_client->sin_port));
             fflush(stdout);
-            FD_SET(new_socket, &afds);
+            // FD_SET(new_socket, &afds);
             register_client(str_cli_ip,ntohs(sock_client->sin_port), id);
             id++;
             send(new_socket , status , strlen(status) , 0 );
@@ -155,8 +149,8 @@ int main(int argc, char const* argv[])
                             // cout << clients.size();
                             fflush(stdout);
             
-        }
+        
 
-    }
+    
     return 0;
 }
