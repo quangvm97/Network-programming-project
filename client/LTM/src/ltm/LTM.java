@@ -9,8 +9,14 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.DataInputStream;
+import java.io.InputStream;
+import java.io.PrintStream;
+import java.net.InetAddress;
+import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -18,7 +24,7 @@ import java.util.concurrent.Executors;
  * @author aaa
  */
 public class LTM {
-    static final int SERVER_PORT = 4001;
+    static final int SERVER_PORT = 4000;
     private static final String SERVER_IP = "127.0.0.1";
 
     /**
@@ -26,16 +32,16 @@ public class LTM {
      */
     public static void main(String[] args) throws Exception {
 
-//        InetAddress serverAddr = InetAddress.getByName(SERVER_IP);
-//        Socket socket = new Socket(serverAddr, SERVER_PORT);
-//        new Client(socket);
-//        InputStream inFromServer = socket.getInputStream();
-//        DataInputStream in = new DataInputStream(inFromServer);
-//        PrintStream printStream = new PrintStream(socket.getOutputStream());
-//        printStream.println("Readme.odt");
-//        socket.getOutputStream().flush();
-//        Scanner scanner = new Scanner(socket.getInputStream());
-//        System.out.println(scanner.next());
+        InetAddress serverAddr = InetAddress.getByName(SERVER_IP);
+        Socket socket = new Socket(serverAddr, SERVER_PORT);
+        new Client(socket);
+        InputStream inFromServer = socket.getInputStream();
+        DataInputStream in = new DataInputStream(inFromServer);
+        PrintStream printStream = new PrintStream(socket.getOutputStream());
+        printStream.println("Readme.odt");
+        socket.getOutputStream().flush();
+        Scanner scanner = new Scanner(socket.getInputStream());
+        System.out.println(scanner.next());
         String json = "{\"client\":[{\"ip\":\"127.0.0.1\"}, {\"ip\":\"127.0.0.1\"}, {\"ip\":\"127.0.0.1\"}]}";
         parseJson(json);
     }
@@ -44,7 +50,7 @@ public class LTM {
         static final ExecutorService t = Executors.newCachedThreadPool();
     }
 
-    public static List<ClientDetails> parseJson(String json) throws JSONException {
+    private static List<ClientDetails> parseJson(String json) throws JSONException {
         List<ClientDetails> clients = new ArrayList<>();
         JSONObject jsonRoot = new JSONObject(json);
         JSONArray jsonCollection = jsonRoot.getJSONArray("client");
