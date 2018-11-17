@@ -14,6 +14,8 @@
 #include <cstring>
 #include <arpa/inet.h>
 #include <jsoncpp/json/json.h>
+#include <signal.h>
+#include <pthread.h>
 
 //#define _BSD_SOURCE
 #define PORT 8080
@@ -35,8 +37,85 @@ public:
     int client_id;
 };
 
+//Declare global variable
 vector<Client> clients;
 vector<File> files;
+pthread_mutex_t mutex_ptr;
+
+void* handle(void* socket);
+void register_client(string ip, int port, int id);
+void convert(char* buffer, int id);
+
+void* handle(void* socket)
+{
+    // cast type socket to int
+    int new_socket = *((int*)socket);
+    int server_fd, valread, size_file;
+    char buffer[SIZE_BUFFER] = { 0 };
+    char s;
+    bool is_conn = false;
+    is_conn = true;
+    struct sockaddr_storage address;
+    socklen_t len_add = sizeof(address);
+    char* status = "1";
+
+    // detach thread
+    pthread_detach(pthread_self());
+
+    // get info from socket
+    getpeername(new_socket, (struct sockaddr*)&address, &len_add);
+    struct sockaddr_in* sock_client = (struct sockaddr_in*)&address;
+    char str_cli_ip[INET_ADDRSTRLEN];
+    char str_cli_port[INET_ADDRSTRLEN];
+    inet_ntop(AF_INET, &sock_client->sin_addr, str_cli_ip, INET_ADDRSTRLEN);
+    printf("\nnew connection from ip: %s port: %d", str_cli_ip, ntohs(sock_client->sin_port));
+    fflush(stdout);
+
+    // register new client what connect to server
+    register_client(str_cli_ip, ntohs(sock_client->sin_port), clients.size());
+
+    // Gui thong bao ok
+    send(new_socket, status, strlen(status), 0);
+
+    // Nhan danh sach file tu client
+    memset(&buffer, '\0', sizeof(buffer));
+    valread = read(new_socket, buffer, 1024);
+    // Neu co tra ve danh sach file thi se luu vao
+    if (strcmp(buffer, "") != 0)
+    {
+        convert(buffer, clients.size());
+    }
+
+    int count = files.size();
+    cout << "Tong so file: " << count;
+    cout << "Danh sach file la: ";
+    for (int i = 0; i < count; i++)
+    {
+        cout << (files.at(i).name) << " ";
+    }
+    Json::Value ch;
+    ch[0]["ip"] = "127.0.0.1";
+    ch[0]["port"] = 12;
+    ch[1]["ip"] = "127.0.0.2";
+    ch[1]["port"] = 134;
+
+    Json::Value val;
+    val["list"] = ch;
+    Json::FastWriter fast;
+    string sFast = fast.write(val);
+    send(new_socket, sFast.data(), sFast.size(), 0);
+    cout << sFast;
+
+    // cout << clients.size();
+    fflush(stdout);
+    pthread_mutex_lock(&mutex_ptr);
+    printf("Send file to client succsess!\n");
+//    printf("Total file downloaded: %d", ++num_file_downloaded);
+    fflush(stdout);
+    pthread_mutex_unlock(&mutex_ptr);
+    close(new_socket);
+}
+
 void register_client(string ip, int port, int id)
 {
     Client new_client;
@@ -69,18 +148,18 @@ void convert(char* buffer, int id)
 int main(int argc, char const* argv[])
 {
     int num_file = 0;
-    int server_fd, new_socket, valread, size_file;
+    int server_fd, valread, size_file;
+    int* new_socket;
     struct sockaddr_in address;
     int opt = 1;
     int addrlen = sizeof(address);
     char buffer[SIZE_BUFFER] = { 0 };
     char s;
     bool is_conn = false;
-    fd_set rfds, afds;
     int connfd;
     int id = 0;
     char* status = "1";
-    char hello = '1';
+    pthread_t tid;
 
     // Creating socket file descriptor
     if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) == 0)
@@ -106,67 +185,25 @@ int main(int argc, char const* argv[])
         exit(EXIT_FAILURE);
     }
 
-    if (listen(server_fd, 3) < 0)
+    while (1)
     {
-        perror("listen");
-        exit(EXIT_FAILURE);
+        if (listen(server_fd, 3) < 0)
+        {
+            perror("listen");
+            exit(EXIT_FAILURE);
+        }
+        printf("\nlistening...\n");
+        while (1)
+        {
+            new_socket = new int;
+            if ((*new_socket = accept(server_fd, (struct sockaddr*)&address, (socklen_t*)&addrlen))
+                < 0)
+            {
+                perror("accept");
+                exit(EXIT_FAILURE);
+            }
+            pthread_create(&tid, NULL, &handle, (void*)new_socket);
+        }
     }
-    printf("\nlistening...\n");
-    // FD_ZERO(&afds);
-    // FD_SET(server_fd, &afds);
-
-
-    if ((new_socket = accept(server_fd, (struct sockaddr*)&address, (socklen_t*)&addrlen)) < 0)
-    {
-        perror("accept");
-        exit(EXIT_FAILURE);
-    }
-    struct sockaddr_in* sock_client = (struct sockaddr_in*)&address;
-
-    char str_cli_ip[INET_ADDRSTRLEN];
-    char str_cli_port[INET_ADDRSTRLEN];
-    inet_ntop(AF_INET, &sock_client->sin_addr, str_cli_ip, INET_ADDRSTRLEN);
-    printf("\nclient ip: %s", str_cli_ip);
-    printf("\nclient port: %d\n", ntohs(sock_client->sin_port));
-    fflush(stdout);
-    // FD_SET(new_socket, &afds);
-    register_client(str_cli_ip, ntohs(sock_client->sin_port), id);
-    id++;
-    send(new_socket, status, strlen(status), 0);
-    // Gui thong bao ok
-    fflush(stdout);
-    // Nhan danh sach file tu client
-    memset(&buffer, '\0', sizeof(buffer));
-    valread = read(new_socket, buffer, 1024);
-    // Neu co tra ve danh sach file thi se luu vao
-    if (strcmp(buffer, "") != 0)
-    {
-        convert(buffer, id);
-    }
-
-    int count = files.size();
-    cout << "Tong so file: " << count;
-    cout << "Danh sach file la: ";
-    for (int i = 0; i < count; i++)
-    {
-        cout << (files.at(i).name) << " ";
-    }
-    Json::Value ch;
-    ch[0]["ip"] = "127.0.0.1";
-    ch[0]["port"] = 12;
-    ch[1]["ip"] = "127.0.0.2";
-    ch[1]["port"] = 134;
-
-    Json::Value val;
-    val["list"] = ch;
-    Json::FastWriter fast;
-    string sFast = fast.write(val);
-    send(new_socket, sFast.data(), sFast.size(), 0);
-    cout<<sFast;
-
-    // cout << clients.size();
-    fflush(stdout);
-
-
     return 0;
 }
