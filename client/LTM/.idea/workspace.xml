@@ -2,13 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca8e0112-1a15-45ba-8d9f-95b01a130258" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Server/server" beforeDir="false" afterPath="$PROJECT_DIR$/../../Server/server" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Server/server.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Server/server.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/gson_2_6_2.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/java_json.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ltm/download/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/json_20180813.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/json_20180813.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LTM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LTM.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LTM/ltm/LTM.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LTM/ltm/LTM.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ltm/LTM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ltm/LTM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/ltm/Client$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/ltm/Client$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/ltm/Client$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/ltm/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/ltm/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/ltm/Client.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/ltm/LTM.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/project.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LTM/ltm/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LTM/ltm/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LTM/ltm/ClientDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LTM/ltm/ClientDetails.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LTM/ltm/ClientHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LTM/ltm/Clientt$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LTM/ltm/Clientt$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LTM/ltm/Clientt$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LTM/ltm/Clientt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LTM/ltm/LTM$ThreadManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LTM/ltm/LTM.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LTM/ltm/SendMessage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LTM/ltm/server.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ltm/Client.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ltm/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ltm/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ltm/ClientDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ltm/ClientDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ltm/ClientHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ltm/Clientt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ltm/LTM.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ltm/SendMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ltm/server.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/Client/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/Client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/Client/download/Server.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/Server/Server.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,82 +51,72 @@
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="2068619290">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.1" value="2" />
-          <entry key="project.open.time.17" value="2" />
-          <entry key="project.open.time.26" value="1" />
-          <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="6" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="class" value="2" />
-          <entry key="form" value="1" />
-          <entry key="java" value="15" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CLASS" value="2" />
-          <entry key="GUI_DESIGNER_FORM" value="1" />
-          <entry key="JAVA" value="15" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="dummy" value="1" />
-          <entry key="java" value="1108" />
-          <entry key="txt" value="32" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="1108" />
-          <entry key="PLAIN_TEXT" value="33" />
-        </counts>
-      </usages-collector>
-    </session>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/LTM$J4F.ic" NAME="J4F Coverage Results" MODIFIED="1544777843582" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ltm.*</FILTER>
+    </SUITE>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ltm/LTM.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ltm/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="42" column="22" lean-forward="true" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
+            <state relative-caret-position="389">
+              <caret line="123" column="5" selection-start-line="111" selection-start-column="2" selection-end-line="123" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#797#4758#0" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ltm/J4F.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="307" column="37" lean-forward="true" selection-start-line="307" selection-start-column="37" selection-end-line="307" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#644#733#0" expanded="true" />
+                <element signature="e#2470#2471#0" expanded="true" />
+                <element signature="e#2523#2524#0" expanded="true" />
+                <element signature="e#2572#2573#0" expanded="true" />
+                <element signature="e#2621#2622#0" expanded="true" />
+                <element signature="e#2914#2915#0" expanded="true" />
+                <element signature="e#2967#2968#0" expanded="true" />
+                <element signature="e#3016#3017#0" expanded="true" />
+                <element signature="e#3065#3066#0" expanded="true" />
+                <element signature="e#4029#4030#0" expanded="true" />
+                <element signature="e#4093#4094#0" expanded="true" />
+                <element signature="e#4329#4330#0" expanded="true" />
+                <element signature="e#4403#4404#0" expanded="true" />
+                <element signature="e#10920#11007#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ltm/J4F.form">
+          <provider selected="true" editor-type-id="ui-designer" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ltm/ClientDetails.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+            <state relative-caret-position="102">
+              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
               <folding>
-                <element signature="e#103#104#0" expanded="true" />
-                <element signature="e#131#132#0" expanded="true" />
-                <element signature="e#185#186#0" expanded="true" />
-                <element signature="e#221#222#0" expanded="true" />
+                <element signature="e#224#225#0" expanded="true" />
                 <element signature="e#249#250#0" expanded="true" />
+                <element signature="e#285#286#0" expanded="true" />
+                <element signature="e#313#314#0" expanded="true" />
+                <element signature="e#344#345#0" expanded="true" />
+                <element signature="e#371#372#0" expanded="true" />
+                <element signature="e#411#412#0" expanded="true" />
+                <element signature="e#443#444#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ltm/SendMessage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -123,13 +144,20 @@
         <option value="$PROJECT_DIR$/src/ltm/Clientt.java" />
         <option value="$PROJECT_DIR$/src/ltm/SendMessage.java" />
         <option value="$PROJECT_DIR$/src/ltm/ClientHandler.java" />
-        <option value="$PROJECT_DIR$/src/ltm/Client.java" />
         <option value="$PROJECT_DIR$/src/ltm/server.java" />
         <option value="$PROJECT_DIR$/src/ltm/LTM.kt" />
-        <option value="$PROJECT_DIR$/src/ltm/ClientDetails.java" />
         <option value="$PROJECT_DIR$/src/ltm/LTM.java" />
+        <option value="$PROJECT_DIR$/src/ltm/ClientDetails.java" />
+        <option value="$PROJECT_DIR$/src/ltm/Client.java" />
+        <option value="$PROJECT_DIR$/src/ltm/J4F.java" />
       </list>
     </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="53" />
@@ -145,29 +173,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="LTM" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="LTM" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="LTM" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="LTM" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="LTM" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="LTM" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="ltm" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -190,6 +195,36 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="LTM" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="LTM" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="LTM" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="LTM" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="LTM" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="LTM" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="ltm" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="LTM" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="LTM" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="ltm" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="download" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
       <pane id="Course" />
     </panes>
   </component>
@@ -197,9 +232,11 @@
     <property name="Downloaded.Files.Path.Enabled" value="true" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542362812421" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../json-20180813.jar!/" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544780914136" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../../DATA/java-json.jar!/" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
@@ -221,9 +258,35 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.LTM">
+  <component name="RunManager" selected="Application.J4F">
+    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ltm.Client" />
+      <module name="LTM" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ltm.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Clientt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ltm.Clientt" />
+      <module name="LTM" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ltm.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="J4F" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ltm.J4F" />
       <module name="LTM" />
       <extension name="coverage">
         <pattern>
@@ -265,9 +328,13 @@
       <item itemvalue="Application.Clientt" />
       <item itemvalue="Application.LTM" />
       <item itemvalue="Application.server" />
+      <item itemvalue="Application.J4F" />
+      <item itemvalue="Application.Client" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.J4F" />
+        <item itemvalue="Application.Client" />
         <item itemvalue="Application.LTM" />
         <item itemvalue="Application.server" />
         <item itemvalue="Application.Clientt" />
@@ -284,6 +351,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542107312792</updated>
+      <workItem from="1544718531083" duration="977000" />
     </task>
     <task id="LOCAL-00001" summary="Connect Server And Send Data">
       <created>1542108928459</created>
@@ -295,6 +363,9 @@
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="977000" />
+  </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -305,27 +376,30 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="43" y="25" width="1323" height="743" extended-state="6" />
-    <editor active="true" />
+    <frame x="43" y="25" width="1877" height="1055" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14643696" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14909886" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Educational.CheckDetails" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32952693" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32952693" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.51386625" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49972692" weight="0.32937366" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49972692" weight="0.50863934" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32952693" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32520324" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.325054" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50027305" side_tool="true" weight="0.32937366" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32952693" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32829374" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.3298744" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -334,10 +408,11 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
     </layout>
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Connect Server And Send Data" />
@@ -347,90 +422,98 @@
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ltm/J4F.java</url>
+          <line>337</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ltm/J4F.java</url>
+          <line>245</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="in.readLine()" />
         <watch expression="stdIn.readLine()" />
+        <watch expression="theSocket.isConnected()" />
       </configuration>
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ltm/Client.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="jrt:///usr/lib/jvm/java-1.11.0-openjdk-amd64!/java.base/java/net/AbstractPlainSocketImpl.class">
+    <entry file="file://$PROJECT_DIR$/src/ltm/Client.form" />
+    <entry file="jrt:///usr/lib/jvm/java-1.11.0-openjdk-amd64!/java.base/java/net/AbstractPlainSocketImpl.class" />
+    <entry file="jrt:///usr/lib/jvm/java-1.11.0-openjdk-amd64!/java.base/java/io/DataInputStream.class" />
+    <entry file="file://$PROJECT_DIR$/src/ltm/Clientt.java" />
+    <entry file="file://$PROJECT_DIR$/src/ltm/server.java" />
+    <entry file="file://$PROJECT_DIR$/src/ltm/ClientHandler.java" />
+    <entry file="file://$PROJECT_DIR$/src/ltm/LTM.java" />
+    <entry file="file://$PROJECT_DIR$/src/ltm/SendMessage.java" />
+    <entry file="file://$PROJECT_DIR$/src/ltm/download/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="128" selection-start-line="128" selection-end-line="128" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jrt:///usr/lib/jvm/java-1.11.0-openjdk-amd64!/java.base/java/io/DataInputStream.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ltm/Clientt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ltm/server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="39" column="19" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ltm/ClientHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="68">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ltm/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ltm/LTM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="42" column="22" lean-forward="true" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
+        <state relative-caret-position="389">
+          <caret line="123" column="5" selection-start-line="111" selection-start-column="2" selection-end-line="123" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#797#4758#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ltm/ClientDetails.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+        <state relative-caret-position="102">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
           <folding>
-            <element signature="e#103#104#0" expanded="true" />
-            <element signature="e#131#132#0" expanded="true" />
-            <element signature="e#185#186#0" expanded="true" />
-            <element signature="e#221#222#0" expanded="true" />
+            <element signature="e#224#225#0" expanded="true" />
             <element signature="e#249#250#0" expanded="true" />
+            <element signature="e#285#286#0" expanded="true" />
+            <element signature="e#313#314#0" expanded="true" />
+            <element signature="e#344#345#0" expanded="true" />
+            <element signature="e#371#372#0" expanded="true" />
+            <element signature="e#411#412#0" expanded="true" />
+            <element signature="e#443#444#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ltm/SendMessage.java">
+    <entry file="file://$PROJECT_DIR$/src/ltm/J4F.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ltm/J4F.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
-          <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
+          <caret line="307" column="37" lean-forward="true" selection-start-line="307" selection-start-column="37" selection-end-line="307" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#644#733#0" expanded="true" />
+            <element signature="e#2470#2471#0" expanded="true" />
+            <element signature="e#2523#2524#0" expanded="true" />
+            <element signature="e#2572#2573#0" expanded="true" />
+            <element signature="e#2621#2622#0" expanded="true" />
+            <element signature="e#2914#2915#0" expanded="true" />
+            <element signature="e#2967#2968#0" expanded="true" />
+            <element signature="e#3016#3017#0" expanded="true" />
+            <element signature="e#3065#3066#0" expanded="true" />
+            <element signature="e#4029#4030#0" expanded="true" />
+            <element signature="e#4093#4094#0" expanded="true" />
+            <element signature="e#4329#4330#0" expanded="true" />
+            <element signature="e#4403#4404#0" expanded="true" />
+            <element signature="e#10920#11007#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -474,7 +557,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>10</last-edited>
+          <last-edited>1.8.0_181</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -491,7 +574,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -511,7 +593,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>json-20180813</last-edited>
+          <last-edited>java-json</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

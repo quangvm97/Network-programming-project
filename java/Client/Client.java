@@ -1,4 +1,4 @@
-//package client;
+package client;
 
 import java.io.*;
 import java.net.Socket;
@@ -19,8 +19,7 @@ public class Client {
 		byte []dataBuffer;
 		File newFile = new File("download");// Tao folder luu file Download
 		newFile.mkdir();
-		
-		
+
 		try {
 			while (rep){
 				Socket theSocket = new Socket(hostname, port);

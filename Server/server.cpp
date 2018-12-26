@@ -18,7 +18,7 @@
 #include <pthread.h>
 
 //#define _BSD_SOURCE
-#define PORT 8080
+#define PORT 1901
 #define SIZE_BUFFER 1024
 
 using namespace std;
@@ -57,7 +57,7 @@ void* handle(void* socket)
     is_conn = true;
     struct sockaddr_storage address;
     socklen_t len_add = sizeof(address);
-    char* status = "1";
+    char* status = "1\n";
 
     // detach thread
     pthread_detach(pthread_self());
@@ -76,7 +76,7 @@ void* handle(void* socket)
 
     // Gui thong bao ok
     send(new_socket, status, strlen(status), 0);
-
+send(new_socket, "\n", strlen("\n"), 0);
     // Nhan danh sach file tu client
     memset(&buffer, '\0', sizeof(buffer));
     valread = read(new_socket, buffer, 1024);
