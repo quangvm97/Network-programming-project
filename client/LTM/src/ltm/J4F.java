@@ -23,6 +23,7 @@ public class J4F extends javax.swing.JFrame {
 
     private Socket theSocket;
     private boolean isConnected;
+    final File folder = new File("/home/vuminhduc/Downloads/Network-programming-project/sharing");
 
     /**
      * Creates new form J4F
@@ -251,6 +252,23 @@ public class J4F extends javax.swing.JFrame {
         });
         thread.start();
     }
+    private String listFilesForFolder(final File folder) {
+        List<String> listFile = new ArrayList<>();
+        for (final File fileEntry : folder.listFiles()) {
+            if (fileEntry.isDirectory()) {
+                listFilesForFolder(fileEntry);
+            } else {
+//                System.out.println(fileEntry.getName());
+                listFile.add(fileEntry.getName());
+            }
+        }
+        StringBuilder result = new StringBuilder();
+        for (String s : listFile) {
+            result.append(s).append(" ");
+        }
+        System.out.println(result.toString());
+        return result.toString();
+    }
 
     private void getData(Socket theSocket) throws IOException, JSONException {
         os = new DataOutputStream(theSocket.getOutputStream());
@@ -265,7 +283,7 @@ public class J4F extends javax.swing.JFrame {
 //            System.out.println("done");
             isConnected = true;
         }
-
+        os.writeUTF(listFilesForFolder(folder));
         if (isConnected) {
             System.out.println("Nhap ten file can download: ");
             inputFileName = input.readLine();

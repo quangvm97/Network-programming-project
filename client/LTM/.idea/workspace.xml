@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca8e0112-1a15-45ba-8d9f-95b01a130258" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/java_json1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/json_20180813.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LTM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LTM.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LTM/ltm/J4F$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LTM/ltm/J4F$4.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ltm/J4F.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ltm/J4F.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -42,8 +38,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ltm/J4F.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="339" column="32" lean-forward="true" selection-start-line="339" selection-start-column="32" selection-end-line="339" selection-end-column="32" />
+            <state relative-caret-position="180">
+              <caret line="285" column="46" selection-start-line="285" selection-start-column="46" selection-end-line="285" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#840#929#0" expanded="true" />
@@ -345,7 +341,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="43" y="25" width="1323" height="743" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15113547" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -356,7 +351,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32952693" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49882537" visible="true" weight="0.32899022" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49882537" weight="0.32899022" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49972692" weight="0.50863934" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -395,19 +390,19 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ltm/J4F.java</url>
-          <line>350</line>
+          <line>368</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ltm/J4F.java</url>
-          <line>268</line>
+          <line>286</line>
           <properties />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ltm/J4F.java</url>
-          <line>273</line>
+          <line>291</line>
           <properties />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
@@ -476,8 +471,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ltm/J4F.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="339" column="32" lean-forward="true" selection-start-line="339" selection-start-column="32" selection-end-line="339" selection-end-column="32" />
+        <state relative-caret-position="180">
+          <caret line="285" column="46" selection-start-line="285" selection-start-column="46" selection-end-line="285" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#840#929#0" expanded="true" />
