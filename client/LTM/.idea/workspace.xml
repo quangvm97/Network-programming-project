@@ -2,44 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca8e0112-1a15-45ba-8d9f-95b01a130258" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/java_json.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ltm/download/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/json_20180813.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/json_20180813.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/java_json1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/json_20180813.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LTM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LTM.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/ltm/Client$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/ltm/Client$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/ltm/Client$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/ltm/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/ltm/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/ltm/Client.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/ltm/LTM.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/project.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LTM/ltm/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LTM/ltm/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LTM/ltm/ClientDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LTM/ltm/ClientDetails.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LTM/ltm/ClientHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LTM/ltm/Clientt$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LTM/ltm/Clientt$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LTM/ltm/Clientt$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LTM/ltm/Clientt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LTM/ltm/LTM$ThreadManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LTM/ltm/LTM.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LTM/ltm/SendMessage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LTM/ltm/server.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ltm/Client.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ltm/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ltm/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ltm/ClientDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ltm/ClientDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ltm/ClientHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ltm/Clientt.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ltm/LTM.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ltm/SendMessage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ltm/server.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../java/Client/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../java/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/Client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../java/Client/download/Server.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../java/Server/Server.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LTM/ltm/J4F$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LTM/ltm/J4F$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ltm/J4F.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ltm/J4F.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,11 +30,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ltm/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="123" column="5" selection-start-line="111" selection-start-column="2" selection-end-line="123" selection-end-column="5" />
+            <state relative-caret-position="295">
+              <caret line="46" column="41" lean-forward="true" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#797#4758#0" />
               </folding>
             </state>
           </provider>
@@ -74,24 +42,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ltm/J4F.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="307" column="37" lean-forward="true" selection-start-line="307" selection-start-column="37" selection-end-line="307" selection-end-column="37" />
+            <state relative-caret-position="228">
+              <caret line="339" column="32" lean-forward="true" selection-start-line="339" selection-start-column="32" selection-end-line="339" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#644#733#0" expanded="true" />
-                <element signature="e#2470#2471#0" expanded="true" />
-                <element signature="e#2523#2524#0" expanded="true" />
-                <element signature="e#2572#2573#0" expanded="true" />
-                <element signature="e#2621#2622#0" expanded="true" />
-                <element signature="e#2914#2915#0" expanded="true" />
-                <element signature="e#2967#2968#0" expanded="true" />
-                <element signature="e#3016#3017#0" expanded="true" />
-                <element signature="e#3065#3066#0" expanded="true" />
-                <element signature="e#4029#4030#0" expanded="true" />
-                <element signature="e#4093#4094#0" expanded="true" />
-                <element signature="e#4329#4330#0" expanded="true" />
-                <element signature="e#4403#4404#0" expanded="true" />
-                <element signature="e#10920#11007#0" expanded="true" />
+                <element signature="e#840#929#0" expanded="true" />
+                <element signature="e#2697#2698#0" expanded="true" />
+                <element signature="e#2750#2751#0" expanded="true" />
+                <element signature="e#2799#2800#0" expanded="true" />
+                <element signature="e#2848#2849#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -100,6 +59,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ltm/J4F.form">
           <provider selected="true" editor-type-id="ui-designer" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ltm/ListDialog.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-590">
+              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -173,28 +141,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="LTM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LTM" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LTM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LTM" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LTM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LTM" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ltm" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Course" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -224,8 +172,28 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Course" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="LTM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LTM" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LTM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LTM" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LTM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LTM" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ltm" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -235,7 +203,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544780914136" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../../DATA/java-json.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../java-json.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -376,30 +344,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="43" y="25" width="1877" height="1055" extended-state="6" />
+    <frame x="43" y="25" width="1323" height="743" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14909886" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15113547" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Educational.CheckDetails" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32952693" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49972692" weight="0.32937366" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49882537" visible="true" weight="0.32899022" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49972692" weight="0.50863934" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32952693" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.325054" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50027305" side_tool="true" weight="0.32937366" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5011746" side_tool="true" weight="0.32899022" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32829374" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32736155" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.3298744" />
+      <window_info anchor="bottom" id="Educational.CheckDetails" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -409,6 +376,8 @@
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="right" id="Database" order="8" />
+      <window_info anchor="right" id="Maven" order="9" />
+      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.3298744" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -426,15 +395,21 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ltm/J4F.java</url>
-          <line>337</line>
+          <line>350</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ltm/J4F.java</url>
-          <line>245</line>
+          <line>268</line>
           <properties />
-          <option name="timeStamp" value="6" />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ltm/J4F.java</url>
+          <line>273</line>
+          <properties />
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -462,16 +437,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ltm/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="123" column="5" selection-start-line="111" selection-start-column="2" selection-end-line="123" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#797#4758#0" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/ltm/J4F.form">
+      <provider selected="true" editor-type-id="ui-designer" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ltm/ClientDetails.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -490,29 +457,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ltm/J4F.form">
-      <provider selected="true" editor-type-id="ui-designer" />
+    <entry file="file://$PROJECT_DIR$/src/ltm/ListDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-590">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ltm/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="46" column="41" lean-forward="true" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ltm/J4F.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="307" column="37" lean-forward="true" selection-start-line="307" selection-start-column="37" selection-end-line="307" selection-end-column="37" />
+        <state relative-caret-position="228">
+          <caret line="339" column="32" lean-forward="true" selection-start-line="339" selection-start-column="32" selection-end-line="339" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#644#733#0" expanded="true" />
-            <element signature="e#2470#2471#0" expanded="true" />
-            <element signature="e#2523#2524#0" expanded="true" />
-            <element signature="e#2572#2573#0" expanded="true" />
-            <element signature="e#2621#2622#0" expanded="true" />
-            <element signature="e#2914#2915#0" expanded="true" />
-            <element signature="e#2967#2968#0" expanded="true" />
-            <element signature="e#3016#3017#0" expanded="true" />
-            <element signature="e#3065#3066#0" expanded="true" />
-            <element signature="e#4029#4030#0" expanded="true" />
-            <element signature="e#4093#4094#0" expanded="true" />
-            <element signature="e#4329#4330#0" expanded="true" />
-            <element signature="e#4403#4404#0" expanded="true" />
-            <element signature="e#10920#11007#0" expanded="true" />
+            <element signature="e#840#929#0" expanded="true" />
+            <element signature="e#2697#2698#0" expanded="true" />
+            <element signature="e#2750#2751#0" expanded="true" />
+            <element signature="e#2799#2800#0" expanded="true" />
+            <element signature="e#2848#2849#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -593,7 +565,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>java-json</last-edited>
+          <last-edited>java-json1</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

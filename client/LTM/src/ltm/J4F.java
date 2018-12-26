@@ -21,6 +21,9 @@ import java.util.List;
  */
 public class J4F extends javax.swing.JFrame {
 
+    private Socket theSocket;
+    private boolean isConnected;
+
     /**
      * Creates new form J4F
      */
@@ -66,8 +69,8 @@ public class J4F extends javax.swing.JFrame {
 
         jLabel2.setText("Port: ");
 
-        jTextField1.setText("4000");
-        jTextField1.addActionListener(evt -> jTextField1ActionPerformed(evt));
+        jTextField1.setText("1901");
+        jTextField1.addActionListener(this::jTextField1ActionPerformed);
 
         jButtonConnectServer.setText("Connect Server");
         jButtonConnectServer.addActionListener(evt -> {
@@ -125,18 +128,10 @@ public class J4F extends javax.swing.JFrame {
         jLabelFileSize.setText("0");
 
         jTextFieldIp.setText("127.0.0.1");
-        jTextFieldIp.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldIpActionPerformed(evt);
-            }
-        });
+        jTextFieldIp.addActionListener(evt -> jTextFieldIpActionPerformed(evt));
 
         jButtonShowFileSharing.setText("Show Files Sharing");
-        jButtonShowFileSharing.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonShowFileSharingActionPerformed(evt);
-            }
-        });
+        jButtonShowFileSharing.addActionListener(evt -> jButtonShowFileSharingActionPerformed(evt));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -226,6 +221,15 @@ public class J4F extends javax.swing.JFrame {
         );
 
         pack();
+        if (theSocket != null) {
+            try {
+                getData(theSocket);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
     }// </editor-fold>//GEN-END:initComponents
 
     private void connectServer() {
@@ -238,75 +242,8 @@ public class J4F extends javax.swing.JFrame {
                     port = jTextField1.getText();
                     jButtonConnectServer.setEnabled(true);
                 }
-                Socket theSocket = new Socket(jTextFieldIp.getText(), Integer.parseInt(port));
-                os = new DataOutputStream(theSocket.getOutputStream());
-                data = new DataInputStream(theSocket.getInputStream());
-                is = new DataInputStream(theSocket.getInputStream());
-                String respone = is.readLine();
-                if (respone.equals("1")) {
-                    System.out.println(respone);
-                    jLabelStatus.setText("Connected");
-                    jLabelStatus.setForeground(Color.GREEN);
-                    os.writeUTF("ahihi");
-                } else {
-                    System.out.println("Nhap ten file can download: ");
-                    inputFileName = input.readLine();
-                    os.writeUTF(inputFileName);
-                    parseJson(input.readLine());
-                    long filesize = is.readLong();// Doc kich thuoc file Server gui
-                    if (filesize == 0) {
-                        System.out.println("File Khong ton tai!");
-                    } else {
-                        inputFile = new File(newFile.getPath() + "/" + inputFileName);// Luu file download theo duong dan
-                        if (!inputFile.exists()) {
-                            inputFile.createNewFile();
-                        }
-                        fileReader = new FileOutputStream(inputFile);
-                        System.out.println("Kich thuoc file la: " + filesize + " byte");
-                        // Doc va luu file to
-                        if (filesize > 1000) {
-                            while (filesize >= 1000) {
-                                int dataLength;
-                                dataBuffer = new byte[1000];
-                                if ((dataLength = data.read(dataBuffer, 0, 1000)) == 1000) {
-                                    fileReader.write(dataBuffer, 0, dataLength);
-                                } else {
-                                    System.out.println("Download loi! Vui long download lai!");
-                                    break;
-                                }
-                                filesize = filesize - 1000;
-                            }
-                            int dataLength = (int) filesize;
-                            dataBuffer = new byte[dataLength];
-                            if ((dataLength = data.read(dataBuffer, 0, dataLength)) == dataLength) {
-                                fileReader.write(dataBuffer, 0, dataLength);
-                                System.out.println("Download file " + inputFileName + " thanh cong!");
-                            } else {
-                                System.out.println("Download loi! Vui long download lai!");
-//                                break;
-                            }
-                            // Doc va luu file nho
-                        } else {
-                            int dataLength = (int) filesize;
-                            dataBuffer = new byte[dataLength];
-                            if ((dataLength = data.read(dataBuffer, 0, dataLength)) == dataLength) {
-                                fileReader.write(dataBuffer, 0, dataLength);
-                                System.out.println("Download file " + inputFileName + " thanh cong");
-                            } else {
-                                System.out.println("Download loi! Vui long download lai!");
-//                                break;
-                            }
-                        }//end else
-                    }// end else
-//                }
-                    System.out.println("Ban co muon tiep tuc download khong? Y/N: ");
-                    String x = input.readLine();
-                    data.close();
-                    is.close();
-                    os.close();
-                    theSocket.close();
-                    theSocket.setKeepAlive(false);
-                }
+                theSocket = new Socket(jTextFieldIp.getText(), Integer.parseInt(port));
+                getData(theSocket);
             } // end try
             catch (Exception ex) {
                 System.err.println(ex);
@@ -315,14 +252,90 @@ public class J4F extends javax.swing.JFrame {
         thread.start();
     }
 
+    private void getData(Socket theSocket) throws IOException, JSONException {
+        os = new DataOutputStream(theSocket.getOutputStream());
+        data = new DataInputStream(theSocket.getInputStream());
+        is = new DataInputStream(theSocket.getInputStream());
+        String respone = is.readLine();
+        if (respone.equals("1")) {
+            System.out.println(respone);
+            jLabelStatus.setText("Connected");
+            jLabelStatus.setForeground(Color.GREEN);
+//            os.writeUTF("ahihi");
+//            System.out.println("done");
+            isConnected = true;
+        }
+
+        if (isConnected) {
+            System.out.println("Nhap ten file can download: ");
+            inputFileName = input.readLine();
+            os.writeUTF(inputFileName);
+            System.out.println(data.readLine());
+            parseJson(data.readLine());
+            long filesize = is.readLong();// Doc kich thuoc file Server gui
+            if (filesize == 0) {
+                System.out.println("File Khong ton tai!");
+            } else {
+                inputFile = new File(newFile.getPath() + "/" + inputFileName);// Luu file download theo duong dan
+                if (!inputFile.exists()) {
+                    inputFile.createNewFile();
+                }
+                fileReader = new FileOutputStream(inputFile);
+                System.out.println("Kich thuoc file la: " + filesize + " byte");
+                // Doc va luu file to
+                if (filesize > 1000) {
+                    while (filesize >= 1000) {
+                        int dataLength;
+                        dataBuffer = new byte[1000];
+                        if ((dataLength = data.read(dataBuffer, 0, 1000)) == 1000) {
+                            fileReader.write(dataBuffer, 0, dataLength);
+                        } else {
+                            System.out.println("Download loi! Vui long download lai!");
+                            break;
+                        }
+                        filesize = filesize - 1000;
+                    }
+                    int dataLength = (int) filesize;
+                    dataBuffer = new byte[dataLength];
+                    if ((dataLength = data.read(dataBuffer, 0, dataLength)) == dataLength) {
+                        fileReader.write(dataBuffer, 0, dataLength);
+                        System.out.println("Download file " + inputFileName + " thanh cong!");
+                    } else {
+                        System.out.println("Download loi! Vui long download lai!");
+//                                break;
+                    }
+                    // Doc va luu file nho
+                } else {
+                    int dataLength = (int) filesize;
+                    dataBuffer = new byte[dataLength];
+                    if ((dataLength = data.read(dataBuffer, 0, dataLength)) == dataLength) {
+                        fileReader.write(dataBuffer, 0, dataLength);
+                        System.out.println("Download file " + inputFileName + " thanh cong");
+                    } else {
+                        System.out.println("Download loi! Vui long download lai!");
+//                                break;
+                    }
+                }//end else
+            }// end else
+//                }
+            System.out.println("Ban co muon tiep tuc download khong? Y/N: ");
+            String x = input.readLine();
+            data.close();
+            is.close();
+            os.close();
+            theSocket.close();
+            theSocket.setKeepAlive(false);
+        }
+    }
+
     private static java.util.List<ClientDetails> parseJson(String json) throws JSONException {
         List<ClientDetails> clients = new ArrayList<>();
         JSONObject jsonRoot = new JSONObject(json);
-        JSONArray jsonCollection = jsonRoot.getJSONArray("client");
+        JSONArray jsonCollection = jsonRoot.getJSONArray("list");
         for (int i = 0; i < jsonCollection.length(); i++) {
             ClientDetails client =
                     new ClientDetails(jsonCollection.getJSONObject(i).getString("ip"),
-                            jsonCollection.getJSONObject(i).getString("port"));
+                            String.valueOf(jsonCollection.getJSONObject(i).getInt("port")));
             System.out.println(client.getIp() + "\t" + client.getPort());
             clients.add(client);
         }
